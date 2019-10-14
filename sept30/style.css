@@ -1,0 +1,56 @@
+body 
+{
+	background: yellow;
+}
+
+h1 
+{
+	color:red;
+	font-style: italic;
+	background-color: blue;
+}
+
+h2
+{
+	font-style: italic;
+}
+
+p
+{
+	color: blue;
+}
+
+#special
+{
+	font-family: futura;
+}
+
+.info
+{
+	font-family: helvetica;
+	font-weight: bold;
+	color: red;
+}
+
+div
+{
+	background-color: black;
+	width: 30%
+}
+
+#cyanbk
+{
+	background-color: cyan;
+	width: 150px;
+	position: relative;
+	left: 100px;
+}
+
+#greenbk
+{
+	background-color: green;
+	width: 200px;
+	position: fixed;
+	left: 200px;
+	bottom: 100px;
+}
