@@ -1,0 +1,126 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url(images/loginback-01.jpg);
+	background-size: cover;
+	font-family: sans-serif;
+
+}
+
+.loginbox{
+	width: 320px;
+	height: 420px;
+	background: white;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(80%,-50%);
+	box-sizing: border-box;
+	
+
+}
+
+
+.logo{
+	width: 200px;
+	height: 100px;
+	position: right;
+	top: -10px; 
+	left: calc(50% - 50px);
+}
+
+h1{
+	margin: 10;
+	padding: 0 0 20px;
+	text-align: left;
+	font-size: 15px;
+	color: #747B84;
+	font-weight: lighter;
+}
+
+.loginbox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 14px;
+	color: #747B84;
+}
+
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: white;
+	outline: none;
+	height: 30px;
+	color: #747B84; 
+	font-size: 16px;
+
+}
+
+.loginbox input[type="Login"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #2B77C2;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	border-radius: 7px;
+	width: 150px;
+
+
+}
+
+.loginbox input[type="login"]:hover
+{
+	cursor: pointer;
+	background: #747B84;
+	color: #000;
+
+}
+
+.loginbox a{
+	text-decoration: none;
+	font-size: 10px;
+	line-height: 20px;
+	color: darkgrey;
+	position: center;
+
+}
+
+.loginbox p-1{
+	font-size: 10px;
+	line-height: 20px;
+	position: center;
+	color: darkgrey;
+	font-weight: lighter;
+
+}
+
+.loginbox a:hover
+{
+	color: #2B77C2;
+}
+
+::placeholder {
+  color: #C3C3C3;
+  opacity: 1; /* Firefox */
+}
+
+
+
+
+
+
+
+
+
+
+

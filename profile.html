@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<section id = "sideNav" > 
+	<a href="loginpage.html"><img class = "logo" src="images/logo.png"></a>
+		<nav class = sideBar>
+			<a href="#" class = "sideLink"> <i class="fa fa-bar-chart" aria-hidden="true"></i>
+	Dashboard</a>
+			<a href="calendar.html" class = "sideLink"><i class="fa fa-book" aria-hidden="true"></i>
+	Academics</a>
+			<a href="#" class="sideLink"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+	Finances</a>
+			<a href="#" class="active"><i class="fa fa-user" aria-hidden="true"></i>
+	Profile</a>
+		</nav>
+</section>
+
+<header>
+	<div class = "userBar">
+		<a href="#" class="notification">
+			<i class="fa fa-bell" aria-hidden="true"></i>
+ 		<span class="notificationCircle">2</span></a>
+		<a class = "userBarLink" href="#">John Doe</a><i class="fa fa-caret-down" aria-hidden="true"></i>
+		</a>
+	</div>
+</header>
+
+<section id="subNavigation">
+<ul class = "subNav">
+  <li class="subNavItem"><a class="activeSub" href="#">Contact Information</a></li>
+  <li class="subNavItem"><a class = "subNavLink" href="#">Emergency Contact </a></li>
+  <li class="subNavItem"><a class = "subNavLink" href="#">Education Summary</a></li>
+</ul>
+	
+</section>
+
+<section id="contentSection">
+<!-- 	<div class="contentHeader">
+		<h1>Profile</h1>
+	</div> -->
+
+	<div class="cards">
+		<div class="card">
+			<div class = welcomeSection>
+			<div class="aboutImage"> <img src="images/Avatar.png"></div>
+			<h1>Hello John!</h1>	
+			</div>
+
+			<div class="columnGrid">
+				<form class = "firstSection">
+ 					First name: <input type="text" name="fname" value='John'><br>
+ 					Last name: <input type="text" name="lname" value='Doe' ><br>	
+  					Student Number: <input type="text" name="lname" value='5001234567'><br>				
+				</form>
+
+				<hr>
+
+				<form class = "secondSection">
+ 					Preffered Name: <input type="text" name="fname" value='John'><br>	
+				</form>
+
+				<hr>
+
+				<form class = "thirdSection">
+ 					Primary Email: <input id = "pEmail" type="text" name="fname" value='John.doe@ryerson.ca'><br>
+ 					 <p id="pEmailStatus"></p>	
+ 					Secondary Email: <input id = "sEmail" type="text" name="fname" value='John.doe@gmail.com'><br>
+  					<p id="sEmailStatus"></p>
+ 					Phone number: <input id = "number" type="text" name="fname" value='+(00)123456'><br>
+ 					<p id="numberStatus"></p>			
+				</form>
+
+				<hr>
+
+				<form class = "fourthSection">
+ 					Country: <input type="text" name="fname" value='Canada'><br>	
+ 					Province: <input type="text" name="fname" value='Ontario'><br>
+ 					Postal code: <input type="text" name="fname" value='XYZ123
+'><br>
+ 					Street: <input type="text" name="fname" value='1134 SomeStreet'><br>			
+				</form>
+
+				<hr>
+
+				<button onclick="verifyInput()" class = "primaryButton">Save Changes</button>
+
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+	<script type="text/javascript">
+
+		function validatePrimaryEmail(mail) 
+		{
+		 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+		  {
+		    var ansText = document.querySelector("#pEmailStatus");
+			ansText.textContent = "";
+		    return (true)
+		  }
+		    var ansText = document.querySelector("#pEmailStatus");
+		    //var selectedField = document.querySelector("#number");
+
+			ansText.textContent = "Please enter a valid email address";
+			ansText.style.color = "red";
+		    return (false)
+		}
+
+		function validateSecondaryEmail(mail) 
+		{
+		 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+		  {
+		    var ansText = document.querySelector("#sEmailStatus");
+			ansText.textContent = "";
+		    return (true)
+		  }
+		    var ansText = document.querySelector("#sEmailStatus");
+			ansText.textContent = "Please enter a valid email address";
+			ansText.style.color = "red";
+		    return (false)
+		}
+
+		function validateNumber(number) 
+		{
+		  var correctNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		  if(number.match(correctNumber)) {
+		    var ansText = document.querySelector("#numberStatus");
+			ansText.textContent = "";
+		    return true;
+		  }
+		  else {
+		    var ansText = document.querySelector("#numberStatus");
+			ansText.textContent = "Please enter a valid 10 digit phone number";
+			ansText.style.color = "red";
+		    return (false)
+		  }
+		}
+
+
+		function verifyInput()
+		{
+
+		// Verify users email and number"
+			var primaryEmail = document.getElementById("pEmail").value
+			var secondaryEmail = document.getElementById("sEmail").value
+			var userNumber = document.getElementById("number").value
+
+			validatePrimaryEmail(primaryEmail);
+			validateSecondaryEmail(secondaryEmail);
+			validateNumber(userNumber);
+		}
+
+	</script>
+
+</body>
+</html>

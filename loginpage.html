@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+<title>login Form Design</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+
+<body>
+
+	<div class="loginbox">
+	<img src="images/ryerson_logo.png" class="logo">
+		<h1>Welcome back! Please login to your account.</h1>
+		<form>
+			<p id="userNameLabel">Username</p>
+			<input id="uname" type="text" name="" placeholder="Enter Ryerson Email">
+			<p id="unameStatus"></p>
+			<p id="passLabel">Password</p>
+			<input id="pass" type="password" name="" placeholder="Enter Password">
+			<p id="passStatus"></p>
+			<input type="Login" name="" value="Login" onclick="login()"><br>
+
+
+			<script>
+
+				function login()
+				{
+
+					var userName = document.getElementById("uname").value;
+					var userPassword = document.getElementById("pass").value;
+
+					var correctName = "john.doe";
+					var correctPass = "iloveramss";
+
+					if (userName!=correctName) 
+					{
+						var ansText = document.querySelector("#unameStatus");
+		    			var selectedField = document.querySelector("#userNameLabel");
+
+						ansText.textContent = "Invalid username. Remember to not include [@ryerson.ca] in your login.";
+						ansText.style.color = "red";
+						ansText.style.paddingBottom = "20px";
+						ansText.style.fontWeight = "lighter";
+						selectedField.style.color = "red";
+
+					}
+
+
+					if (userPassword!=correctPass) 
+					{
+						var ansText = document.querySelector("#passStatus");
+		    			var selectedField = document.querySelector("#passLabel");
+
+						ansText.textContent = "The password you entered is incorrect.";
+						ansText.style.color = "red";
+						ansText.style.paddingBottom = "20px";
+						ansText.style.fontWeight = "lighter";
+						selectedField.style.color = "red";
+
+					}
+					if (userName==correctName) 
+					{
+						var ansText = document.querySelector("#unameStatus");
+		    			var selectedField = document.querySelector("#userNameLabel");
+
+						ansText.textContent = "";
+						ansText.style.color = "darkgrey";
+						ansText.style.paddingBottom = "0px";
+						ansText.style.fontWeight = "normal";
+						selectedField.style.color = "black";
+
+					}
+
+					if (userPassword==correctPass) 
+					{
+						var ansText = document.querySelector("#passStatus");
+		    			var selectedField = document.querySelector("#passLabel");
+
+						ansText.textContent = "";
+						ansText.style.color = "darkgrey";
+						ansText.style.paddingBottom = "0px";
+						ansText.style.fontWeight = "normal";
+						selectedField.style.color = "black";
+
+					}
+
+					if (userName==correctName && userPassword==correctPass)
+					{
+						window.location.href = "calendar.html";
+					}
+
+				}
+
+			</script>
+
+
+			<a href="#">Can't login?</a>
+			<a href="#">Forgot Password?</a><br>
+			<br>
+			<p-1>For technical issues, please contact the</p-1>
+			<a href="#"> CCS Help Desk</a1>
+		</form>
+
+		
+	</div>
+</body>
+</head>
+</html>
