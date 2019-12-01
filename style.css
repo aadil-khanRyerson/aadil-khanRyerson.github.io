@@ -206,25 +206,29 @@ header
 
 .firstSection
 {
-	padding-bottom: 20px;
+	padding-bottom: 15px;
+	line-height: 28px;
 }
 
 .secondSection
 {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	line-height: 28px;
 }
 
 .thirdSection
 {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	line-height: 28px;
 }
 
 .fourthSection
 {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	line-height: 28px;	
 }
 
 .primaryButton {
@@ -235,8 +239,15 @@ header
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
+	font-size: 14px;
 	margin-top: 20px;
 	border-radius: 4px;
+}
+input#save[disabled] {
+    opacity: .3;
+}
+.error {
+	display: none;
+	color: red;
 }
 

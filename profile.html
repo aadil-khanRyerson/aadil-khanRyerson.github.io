@@ -8,157 +8,199 @@
 <body>
 
 <section id = "sideNav" > 
-	<a href="index.html"><img class = "logo" src="images/logo.png"></a>
-		<nav class = sideBar>
-			<a href="#" class = "sideLink"> <i class="fa fa-bar-chart" aria-hidden="true"></i>
-	Dashboard</a>
-			<a href="calendar.html" class = "sideLink"><i class="fa fa-book" aria-hidden="true"></i>
-	Academics</a>
-			<a href="#" class="sideLink"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-	Finances</a>
-			<a href="#" class="active"><i class="fa fa-user" aria-hidden="true"></i>
-	Profile</a>
-		</nav>
-</section>
-
-<header>
-	<div class = "userBar">
-		<a href="#" class="notification">
-			<i class="fa fa-bell" aria-hidden="true"></i>
- 		<span class="notificationCircle">2</span></a>
-		<a class = "userBarLink" href="#">John Doe</a><i class="fa fa-caret-down" aria-hidden="true"></i>
-		</a>
-	</div>
-</header>
-
-<section id="subNavigation">
-<ul class = "subNav">
-  <li class="subNavItem"><a class="activeSub" href="#">Contact Information</a></li>
-  <li class="subNavItem"><a class = "subNavLink" href="#">Emergency Contact </a></li>
-  <li class="subNavItem"><a class = "subNavLink" href="#">Education Summary</a></li>
-</ul>
-	
-</section>
-
-<section id="contentSection">
-<!-- 	<div class="contentHeader">
-		<h1>Profile</h1>
-	</div> -->
-
-	<div class="cards">
-		<div class="card">
-			<div class = welcomeSection>
-			<div class="aboutImage"> <img src="images/Avatar.png"></div>
-			<h1>Hello John!</h1>	
+	<a href="loginpage.html"><img class = "logo" src="images/logo.png"></a>
+			<nav class = sideBar>
+				<a href="#" class = "sideLink"> 
+					<i class="fa fa-bar-chart" aria-hidden="true"></i>
+					<span>Dashboard</span>
+				</a>
+				<a href="calendar.html" class = "sideLink">
+					<i class="fa fa-book" aria-hidden="true"></i>
+					<span>Academics</span>
+				</a>
+				<a href="#" class="sideLink">
+					<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+					<span>Finances</span>
+				</a>
+				<a href="profile.html" class="active">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<span>Profile</span>
+				</a>
+			</nav>
+		</section>
+		<header>
+			<div class = "userBar">
+				<a href="#" class="notification">
+					<i class="fa fa-bell" aria-hidden="true"></i>
+					<span class="notificationCircle">2</span>
+				</a>
+				<a class = "userBarLink" href="#">
+					<span>John Doe</span>
+					<i class="fa fa-caret-down" aria-hidden="true"></i>
+				</a>
 			</div>
-
-			<div class="columnGrid">
-				<form class = "firstSection">
- 					First name: <input type="text" name="fname" value='John'><br>
- 					Last name: <input type="text" name="lname" value='Doe' ><br>	
-  					Student Number: <input type="text" name="lname" value='5001234567'><br>				
-				</form>
-
-				<hr>
-
-				<form class = "secondSection">
- 					Preffered Name: <input type="text" name="fname" value='John'><br>	
-				</form>
-
-				<hr>
-
-				<form class = "thirdSection">
- 					Primary Email: <input id = "pEmail" type="text" name="fname" value='John.doe@ryerson.ca'><br>
- 					 <p id="pEmailStatus"></p>	
- 					Secondary Email: <input id = "sEmail" type="text" name="fname" value='John.doe@gmail.com'><br>
-  					<p id="sEmailStatus"></p>
- 					Phone number: <input id = "number" type="text" name="fname" value='+(00)123456'><br>
- 					<p id="numberStatus"></p>			
-				</form>
-
-				<hr>
-
-				<form class = "fourthSection">
- 					Country: <input type="text" name="fname" value='Canada'><br>	
- 					Province: <input type="text" name="fname" value='Ontario'><br>
- 					Postal code: <input type="text" name="fname" value='XYZ123
-'><br>
- 					Street: <input type="text" name="fname" value='1134 SomeStreet'><br>			
-				</form>
-
-				<hr>
-
-				<button onclick="verifyInput()" class = "primaryButton">Save Changes</button>
-
+		</header>
+		<section id="contentSection">
+			<div class="cards">
+				<div class="card">
+					<div class="welcomeSection">
+						<div class="aboutImage">
+							<img src="images/Avatar.png">
+						</div>
+						<h1>Hello John!</h1>
+					</div>
+					<div class="firstSection">
+						<form>
+							<label>First name:</label>
+							<input type="text" name="fname" placeholder='John'><br>
+							<label>Last name: </label>
+							<input type="text" name="lname" placeholder='Doe'><br>
+						</form>
+					</div>
+					<div class="secondSection">
+						<form>
+							<label>Student Number:</label>
+							<input type="text" name="lname" placeholder='5001234567'><br>
+							<label>Prerferred Name:</label>
+							<input type="text" name="fname" placeholder='John Doe'><br>	
+						</form>
+					</div>
+					<div class="thirdSection">
+						<form  name="frmRegister" id="frmRegister">
+							<label>
+								<span>Email Address:</span>
+								<input name="txtemail" id="email" placeholder='john.doe@ryerson.ca' required="required" type="email" oninput="validateForm()">
+							</label>
+							<br>
+							<span class="error" id="emailError">Please enter a valid email
+							</span>
+							<label>
+								<span>Phone number: 
+								</span>
+								<input type="number" name="phone" id="phone" placeholder='6479176789' oninput="validateForm()">
+							</label>
+							<br>
+							<span class="error" id="phoneError">Please enter a valid phone number
+							</span>
+						</form>
+					</div>
+					<div class="fourthSection">
+						<form>
+							<span>Preferred Address:</span>
+							<br>
+							<label>
+								<span>Street:</span>
+								<input type="text" name="fname" placeholder='1134 Roehampton'>
+							</label>
+							<br>
+							<label>
+								<span>City:</span>
+								<input type="text" name="fname" placeholder='Toronto'>
+							</label>
+							<br>
+							<label>
+								<span>Province:</span>
+								<input type="text" name="fname" placeholder='Ontario'>
+							</label>
+							<br>
+							<label>
+								<span>Postal code:</span>
+								<input type="text" name="postal" id="postal" placeholder='M4P1P9' oninput="validateForm()">
+							</label>
+							<br>
+							<span class="error" id="postalError">Please enter a valid postal code
+							</span>
+						</form>
+					</div>
+					<div>
+						<input id="save" class="primaryButton" type="button" onclick="saveForm()" disabled="disabled" value="Save changes">
+					</div>	
+				</div>
 			</div>
-		</div>
-	</div>
-	
-</section>
-
+		</section>
+	</body>
 	<script type="text/javascript">
 
-		function validatePrimaryEmail(mail) 
-		{
-		 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
-		  {
-		    var ansText = document.querySelector("#pEmailStatus");
-			ansText.textContent = "";
-		    return (true)
-		  }
-		    var ansText = document.querySelector("#pEmailStatus");
-		    //var selectedField = document.querySelector("#number");
-
-			ansText.textContent = "Please enter a valid email address";
-			ansText.style.color = "red";
-		    return (false)
+		function validateEmail(email) {
+		    var result = /\S+@\S+\.\S+/;
+		    return result.test(email);
+		}
+		function validatePhone(phone) {
+		    var result = phone.toString();
+		    return result.length == 10 ;
 		}
 
-		function validateSecondaryEmail(mail) 
-		{
-		 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
-		  {
-		    var ansText = document.querySelector("#sEmailStatus");
-			ansText.textContent = "";
-		    return (true)
-		  }
-		    var ansText = document.querySelector("#sEmailStatus");
-			ansText.textContent = "Please enter a valid email address";
-			ansText.style.color = "red";
-		    return (false)
+		function isLetter(str) {
+		  return str.length == 1 && str.match(/[a-z]/i);
 		}
 
-		function validateNumber(number) 
-		{
-		  var correctNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-		  if(number.match(correctNumber)) {
-		    var ansText = document.querySelector("#numberStatus");
-			ansText.textContent = "";
-		    return true;
+		function isNumber(nb) {
+		  return parseInt(nb) > -1 && parseInt(nb) < 10; 
+		}
+
+		function validatePostal(postal) {
+		    if(postal.length != 6) {
+		    	return false
+		    }
+		    else {
+		    	if(isLetter(postal[0]) && isLetter(postal[2]) && isLetter(postal[4]) &&
+		    	   isNumber(postal[1]) && isNumber(postal[3]) && isNumber(postal[5])) {
+		    		return true;
+		    	}
+		    	else {
+		    		return false;
+		    	}
+		    }
+		}
+
+
+		function validateForm() {
+		  var email = document.getElementById("email").value;
+		  var phone = document.getElementById("phone").value;
+		  var postal = document.getElementById("postal").value;
+		  var emailError = document.getElementById("emailError");
+		  var phoneError = document.getElementById("phoneError");
+		  var postalError = document.getElementById("postalError");
+
+		  var validForm = true;
+		  if(!validateEmail(email)) {
+		  	emailError.style.display = "block";
+		  	validForm = false;
 		  }
 		  else {
-		    var ansText = document.querySelector("#numberStatus");
-			ansText.textContent = "Please enter a valid 10 digit phone number";
-			ansText.style.color = "red";
-		    return (false)
+		  	emailError.style.display = "none";
+		  }
+		  if(!validatePhone(phone)) {
+		  	phoneError.style.display = "block";
+		  	validForm = false;
+		  }
+		  else {
+		  	phoneError.style.display = "none";
+		  }
+		  if(!validatePostal(postal)) {
+		  	postalError.style.display = "block";
+		  	validForm = false;
+		  }
+		  else {
+		  	postalError.style.display = "none";
+		  }
+
+		  if (validForm) {
+		  	document.getElementById("save").disabled = false;
+		  }
+		  else {
+		  	document.getElementById("save").disabled = true;
 		  }
 		}
 
-
-		function verifyInput()
-		{
-
-		// Verify users email and number"
-			var primaryEmail = document.getElementById("pEmail").value
-			var secondaryEmail = document.getElementById("sEmail").value
-			var userNumber = document.getElementById("number").value
-
-			validatePrimaryEmail(primaryEmail);
-			validateSecondaryEmail(secondaryEmail);
-			validateNumber(userNumber);
+		function saveForm () {
+			var inputs, i;
+			inputs = document.querySelectorAll("input");
+			for (i = 0; i < inputs.length; i++) {
+			inputs[i].style.border = "none";
+			}
+			document.getElementById("save").style.display = "none";
 		}
-
+	
 	</script>
-
-</body>
-</html>
+</html>	
